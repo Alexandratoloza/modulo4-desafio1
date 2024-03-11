@@ -5,11 +5,9 @@ function Paciente(nombre, edad, rut, diagnostico) {
     this.nombre = nombre;
     this.edad = edad;
     this.rut = rut;
-    this.diagnostico = diagnostico
+    this.diagnostico = diagnostico;
 
-    this.saludar = function(){
-        return `${this.nombre} dice hola`
-    }
+    
 }
 
 
@@ -66,3 +64,17 @@ function Paciente(nombre, edad, rut, diagnostico) {
   const todosLosPaciente = paciente.mostrarPacientesRegistrados();
   console.log('Todos los pacientes registrados:', todosLosPaciente);
   
+ class consultorio{
+    constructor(paciente){
+        this.paciente = paciente
+    }
+    get getpaciente(){
+        return this.paciente
+    }
+
+    set setnombre(value){
+        this.nombre = value
+    }
+
+ }
+ console.log(paciente)
